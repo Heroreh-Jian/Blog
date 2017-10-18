@@ -6,7 +6,9 @@ var express = require("express"),
     mongoose = require("mongoose");
 
 // App config
-mongoose.connect("mongodb://localhost/restful_blog_app",{useMongoClient:true});
+// mongoose.connect("mongodb://localhost/restful_blog_app",{useMongoClient:true});
+mongoose.connect("mongodb://Jian:jian123@ds125255.mlab.com:25255/blogapp",{useMongoClient:true});
+
 app.use(bodyParser.urlencoded({extended:true}));
 // express sanitizer needs to use after bodyparser
 app.use(expressSanitizer());
